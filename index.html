@@ -1,0 +1,1686 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#1C994D">
+  <meta charset="utf-8">
+
+  <title>Subway Nutrition Calculator❤️Effortlessly Monitor Nutrients and Macros🌟</title>
+  <meta name="description"
+    content="Track Your Subway Sandwich Nutrition With Our ⚡ Handy Calculator! ⭐ Stay Informed, Make Healthier Choices ✌" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+  <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+
+  <!-- Social Previews -->
+  <meta property="og:url" content="https://SubwayNutritionCalculator.github.io/">
+  <meta property="og:title" content="Subway Nutrition Calculator❤️Effortlessly Monitor Nutrients and Macros🌟">
+  <meta property="og:description"
+    content="Track Your Subway Sandwich Nutrition With Our ⚡ Handy Calculator! ⭐ Stay Informed, Make Healthier Choices ✌">
+  <meta property="og:locale" content="en">
+  <meta property="og:site_name" content="subway nutrition calculator">
+  <meta property="og:image" content="https://SubwayNutritionCalculator.github.io/images/SNC-Main-Image.webp">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Subway Nutrition Calculator❤️Effortlessly Monitor Nutrients and Macros🌟">
+  <meta name="twitter:description"
+    content="Track Your Subway Sandwich Nutrition With Our ⚡ Handy Calculator! ⭐ Stay Informed, Make Healthier Choices ✌">
+  <meta name="twitter:image" content="https://SubwayNutritionCalculator.github.io/images/SNC-Main-Image.webp">
+
+  <!-- Assests, Css, Js Links etc -->
+  <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/styles/style.min.css">
+<!-- Google fonts-->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+
+  <!-- Subway Nutrition CSS -->
+  <link rel="stylesheet" type="text/css" href="/assets/Subway_Nutrition_assest/css_Subway_Nutrition/SNCstyle.min.css">
+
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S563NQXLRT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-S563NQXLRT');
+  </script>
+
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+  <!-- Navbar-->
+  <nav class="navbar navbar-expand-lg shadow-sm py-2">
+
+    <div class="container">
+      <div class="logo float-md-start fw-bold"> <a href="https://SubwayNutritionCalculator.github.io/"> Subway Nutrition
+          Calculator</a></div>
+
+    </div>
+  </nav> <!-- navbar-end -->
+
+
+  <!-- Content -->
+  <div class="container bg-w mt-4 mb-4">
+    <div class="row">
+
+      <div class="col-lg-8">
+        <!-- Left Content Area -->
+        <div id="colsWrap" class="calculator vLine2 publicCalc">
+          <div id="col1" class="rel">
+
+
+            <div class="columnWrap">
+              <div id="calcTip1" class="calcTip arrowS">
+                <div class="tipText">Start building your meal!</div>
+                <div class="pointer"></div>
+              </div>
+
+              <div id="calcTip2" class="calcTip arrowW">
+                <div class="tipText">Choose a main menu category.</div>
+                <div class="pointer"></div>
+              </div>
+
+              <div id="calcTip3" class="calcTip arrowS">
+                <div class="tipText">Customize your items in this column.</div>
+                <div class="pointer"></div>
+              </div>
+
+              <div class="column select">
+
+                <h3 class="one">
+                  Select a menu
+                </h3>
+                <div class="select_inner equalize calculatorItemDivSub2" id="calculatorItemDivSub2ID">
+
+                  <label for="item_category_id" class="sr-only">Select Main Menu Category</label>
+                  <div>
+
+                    <!-- <script type="text/javascript">
+                      atOptions = {
+                        'key': '9bce7635260b6f5dd46e31f0226eddbe',
+                        'format': 'iframe',
+                        'height': 60,
+                        'width': 468,
+                        'params': {}
+                      };
+                      document.write('<scr' + 'ipt type="text/javascript" src="//fireworkswad.com/9bce7635260b6f5dd46e31f0226eddbe/invoke.js"></scr' + 'ipt>');
+                    </script> -->
+
+
+                  </div>
+                  <select id="item_category_id" style="display: none;" name="">
+                    <option value="">Select Main Menu Category</option>
+                  </select>
+                  <div class="h5"></div>
+                  <div id="item_div"></div>
+                  <div id="ingredient_category_div"></div>
+                  <div class="h10"></div>
+                </div>
+
+              </div>
+
+              <div class="column select calculatorContainsDivSub">
+                <h3 class="two">
+                  Customize Your Menu
+                </h3>
+
+                <div class="select_inner equalize calculatorContainsDivSub2">
+                  <div id="innerMessageID" class="innerMessage"></div>
+                  <div class="two-select">
+                    <div id="itemIngredients"></div>
+                  </div>
+
+                  <div class="alignC">
+                    <input type="button" value="Add to Meal" id="buildNewItem" class="formButton" />
+                  </div>
+                </div>
+              </div>
+
+              <div id="basketWrap" class="select" style="display: none;">
+                <h3 class="basket">
+
+                  Your Basket
+                </h3>
+                <div class="select_inner" id="basketValues"></div>
+              </div>
+              <div class="column select calculatorShareMeal">
+                <h3>
+                  Share Now with your Friends & Family
+                </h3>
+
+                <div class="select_inner clearfix">
+
+                  <div class="sharebtns">
+                    <!-- Sharingbutton Facebook -->
+                    <a class="resp-sharing-button__link"
+                      href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2FSubwayNutritionCalculator.github.io%2F"
+                      target="_blank" rel="noopener" aria-label="">
+                      <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small">
+                        <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                              d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </a>
+
+                    <!-- Sharingbutton Twitter -->
+                    <a class="resp-sharing-button__link"
+                      href="https://twitter.com/intent/tweet/?text=&amp;url=https%3A%2F%2FSubwayNutritionCalculator.github.io%2F"
+                      target="_blank" rel="noopener" aria-label="">
+                      <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small">
+                        <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                              d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </a>
+
+                    <!-- Sharingbutton E-Mail -->
+                    <a class="resp-sharing-button__link"
+                      href="mailto:?subject=&amp;body=https%3A%2F%2FSubwayNutritionCalculator.github.io%2F" target="_self"
+                      rel="noopener" aria-label="">
+                      <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small">
+                        <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                              d="M22 4H2C.9 4 0 4.9 0 6v12c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM7.25 14.43l-3.5 2c-.08.05-.17.07-.25.07-.17 0-.34-.1-.43-.25-.14-.24-.06-.55.18-.68l3.5-2c.24-.14.55-.06.68.18.14.24.06.55-.18.68zm4.75.07c-.1 0-.2-.03-.27-.08l-8.5-5.5c-.23-.15-.3-.46-.15-.7.15-.22.46-.3.7-.14L12 13.4l8.23-5.32c.23-.15.54-.08.7.15.14.23.07.54-.16.7l-8.5 5.5c-.08.04-.17.07-.27.07zm8.93 1.75c-.1.16-.26.25-.43.25-.08 0-.17-.02-.25-.07l-3.5-2c-.24-.13-.32-.44-.18-.68s.44-.32.68-.18l3.5 2c.24.13.32.44.18.68z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </a>
+
+                    <!-- Sharingbutton Pinterest -->
+                    <a class="resp-sharing-button__link"
+                      href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2FSubwayNutritionCalculator.github.io%2F&amp;media=https%3A%2F%2FSubwayNutritionCalculator.github.io%2F&amp;description="
+                      target="_blank" rel="noopener" aria-label="">
+                      <div class="resp-sharing-button resp-sharing-button--pinterest resp-sharing-button--small">
+                        <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                              d="M12.14.5C5.86.5 2.7 5 2.7 8.75c0 2.27.86 4.3 2.7 5.05.3.12.57 0 .66-.33l.27-1.06c.1-.32.06-.44-.2-.73-.52-.62-.86-1.44-.86-2.6 0-3.33 2.5-6.32 6.5-6.32 3.55 0 5.5 2.17 5.5 5.07 0 3.8-1.7 7.02-4.2 7.02-1.37 0-2.4-1.14-2.07-2.54.4-1.68 1.16-3.48 1.16-4.7 0-1.07-.58-1.98-1.78-1.98-1.4 0-2.55 1.47-2.55 3.42 0 1.25.43 2.1.43 2.1l-1.7 7.2c-.5 2.13-.08 4.75-.04 5 .02.17.22.2.3.1.14-.18 1.82-2.26 2.4-4.33.16-.58.93-3.63.93-3.63.45.88 1.8 1.65 3.22 1.65 4.25 0 7.13-3.87 7.13-9.05C20.5 4.15 17.18.5 12.14.5z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </a>
+
+                    <!-- Sharingbutton LinkedIn -->
+                    <a class="resp-sharing-button__link"
+                      href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2FSubwayNutritionCalculator.github.io%2F&amp;title=&amp;summary=&amp;source=https%3A%2F%2FSubwayNutritionCalculator.github.io%2F"
+                      target="_blank" rel="noopener" aria-label="">
+                      <div class="resp-sharing-button resp-sharing-button--linkedin resp-sharing-button--small">
+                        <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                              d="M6.5 21.5h-5v-13h5v13zM4 6.5C2.5 6.5 1.5 5.3 1.5 4s1-2.4 2.5-2.4c1.6 0 2.5 1 2.6 2.5 0 1.4-1 2.5-2.6 2.5zm11.5 6c-1 0-2 1-2 2v7h-5v-13h5V10s1.6-1.5 4-1.5c3 0 5 2.2 5 6.3v6.7h-5v-7c0-1-1-2-2-2z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </a>
+
+                    <!-- Sharingbutton Reddit -->
+                    <a class="resp-sharing-button__link"
+                      href="https://reddit.com/submit/?url=https%3A%2F%2FSubwayNutritionCalculator.github.io%2F&amp;resubmit=true&amp;title="
+                      target="_blank" rel="noopener" aria-label="">
+                      <div class="resp-sharing-button resp-sharing-button--reddit resp-sharing-button--small">
+                        <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                              d="M24 11.5c0-1.65-1.35-3-3-3-.96 0-1.86.48-2.42 1.24-1.64-1-3.75-1.64-6.07-1.72.08-1.1.4-3.05 1.52-3.7.72-.4 1.73-.24 3 .5C17.2 6.3 18.46 7.5 20 7.5c1.65 0 3-1.35 3-3s-1.35-3-3-3c-1.38 0-2.54.94-2.88 2.22-1.43-.72-2.64-.8-3.6-.25-1.64.94-1.95 3.47-2 4.55-2.33.08-4.45.7-6.1 1.72C4.86 8.98 3.96 8.5 3 8.5c-1.65 0-3 1.35-3 3 0 1.32.84 2.44 2.05 2.84-.03.22-.05.44-.05.66 0 3.86 4.5 7 10 7s10-3.14 10-7c0-.22-.02-.44-.05-.66 1.2-.4 2.05-1.54 2.05-2.84zM2.3 13.37C1.5 13.07 1 12.35 1 11.5c0-1.1.9-2 2-2 .64 0 1.22.32 1.6.82-1.1.85-1.92 1.9-2.3 3.05zm3.7.13c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9.8 4.8c-1.08.63-2.42.96-3.8.96-1.4 0-2.74-.34-3.8-.95-.24-.13-.32-.44-.2-.68.15-.24.46-.32.7-.18 1.83 1.06 4.76 1.06 6.6 0 .23-.13.53-.05.67.2.14.23.06.54-.18.67zm.2-2.8c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm5.7-2.13c-.38-1.16-1.2-2.2-2.3-3.05.38-.5.97-.82 1.6-.82 1.1 0 2 .9 2 2 0 .84-.53 1.57-1.3 1.87z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </a>
+
+                    <!-- Sharingbutton WhatsApp -->
+                    <a class="resp-sharing-button__link"
+                      href="https://api.whatsapp.com/send?text=%20https%3A%2F%2FSubwayNutritionCalculator.github.io%2F"
+                      target="_blank" rel="noopener" aria-label="">
+                      <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small">
+                        <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                              d="M20.1 3.9C17.9 1.7 15 .5 12 .5 5.8.5.7 5.6.7 11.9c0 2 .5 3.9 1.5 5.6L.6 23.4l6-1.6c1.6.9 3.5 1.3 5.4 1.3 6.3 0 11.4-5.1 11.4-11.4-.1-2.8-1.2-5.7-3.3-7.8zM12 21.4c-1.7 0-3.3-.5-4.8-1.3l-.4-.2-3.5 1 1-3.4L4 17c-1-1.5-1.4-3.2-1.4-5.1 0-5.2 4.2-9.4 9.4-9.4 2.5 0 4.9 1 6.7 2.8 1.8 1.8 2.8 4.2 2.8 6.7-.1 5.2-4.3 9.4-9.5 9.4zm5.1-7.1c-.3-.1-1.7-.9-1.9-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1s-1.2-.5-2.3-1.4c-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6s.3-.3.4-.5c.2-.1.3-.3.4-.5.1-.2 0-.4 0-.5C10 9 9.3 7.6 9 7c-.1-.4-.4-.3-.5-.3h-.6s-.4.1-.7.3c-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.3-.3-.4-.6-.5z" />
+                          </svg>
+                        </div>
+                      </div>
+                    </a>
+
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-4">
+
+        <div id="col2" class="rel">
+
+          <div id="calcTip4" class="calcTip arrowS ">
+            <div class="tipText">Nutrition information updates in real time as you build!</div>
+            <div class="pointer"></div>
+          </div>
+          <br> <br>
+          <div id="calorieDietBlock">
+            <div id="calorieIntakeWrap">
+              <div id="calcTip6" class="calcTip arrowE">
+                <div class="tipText">This calculator provides percentages for recommended daily intake based on the
+                  FDA
+                  guidelines for a 2,000 calorie diet. To customize this percentage to your own specific diet, please
+                  adjust
+                  the calorie number in this box.</div>
+                <div class="pointer"></div>
+              </div>
+
+              <label for="calorieIntakeText" id="calorieIntakeLabel">
+                Calorie Diet </label>
+
+              <input type="text" id="calorieIntakeText" class="formText" value="2000" />
+            </div>&nbsp;
+
+            <button class="setDefault" id="saveCalorie">
+              Set as default </button>
+            <input type="hidden" id="calorieIntake" value="" />
+          </div>
+
+
+
+          <div id="modalCalcIngredients">
+            <h4>Ingredients for <span id="ingredientModelTitle"></span></h4>
+            <div id="ingredientModelValue" style="line-height: 17px; height:200px; overflow-y: auto;"></div><br />
+            Nutrition & Allergen Disclaimer </a><br />
+
+            <div class="ac">
+              <input type="button" class="formButton green" id="btnIngredientClose" value="Close" />
+            </div><br />
+          </div>
+
+          <div class="labelTip" id="labelTipDiv">
+            Please select an item in Menu</div>
+          <!-- Final Result Table -->
+
+
+
+          <!-- <script type="text/javascript">
+            atOptions = {
+              'key': '2722049b4291429e197d2e105fe1a68f',
+              'format': 'iframe',
+              'height': 250,
+              'width': 300,
+              'params': {}
+            };
+            document.write('<scr' + 'ipt type="text/javascript" src="//fireworkswad.com/2722049b4291429e197d2e105fe1a68f/invoke.js"></scr' + 'ipt>');
+          </script> -->
+
+
+
+          <div id="nutritionLabel"></div><br />
+
+          <div class="ac">
+            <canvas id="qrcode" style="display: none;"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="card shadow-sm card-body">
+
+      <h1>How to Use the Subway Nutrition Calculator</h1>
+      <p>Using the <strong>Subway nutrition calculator</strong> is easy and only takes a few minutes to build your order
+        and get nutrition information. Here is a step-by-step guide:</p>
+      <p>To use the Subway Nutrition Calculator, follow these simple steps:</p>
+      <ol>
+        <li>First, you need to select a menu item.</li>
+        <li>Then, Customize the menu according to your need.</li>
+        <li>Check results!</li>
+      </ol>
+      <p><img class="img-fluid mb-4" src="/images/SNC-Main-Image.webp"
+          alt="Subway Nutrition Calculator | Subway Calorie Calculator" /></p>
+
+      <h2>Subway Nutrition/Calorie Table:</h2>
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr class="table-success">
+              <td>
+                <p><strong>Subway Menu Item</strong></p>
+              </td>
+              <td>
+                <p><strong>Serving Size</strong></p>
+              </td>
+              <td>
+                <p><strong>Calories</strong></p>
+              </td>
+              <td>
+                <p><strong>Protein (g)</strong></p>
+              </td>
+              <td>
+                <p><strong>Fat (g)</strong></p>
+              </td>
+              <td>
+                <p><strong>Carbohydrates (g)</strong></p>
+              </td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <p>6" Black Forest Ham</p>
+              </td>
+              <td>
+                <p>6 inch</p>
+              </td>
+              <td>
+                <p>290</p>
+              </td>
+              <td>
+                <p>18</p>
+              </td>
+              <td>
+                <p>4</p>
+              </td>
+              <td>
+                <p>46</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" Cold Cut Combo</p>
+              </td>
+              <td>
+                <p>6 inch</p>
+              </td>
+              <td>
+                <p>350</p>
+              </td>
+              <td>
+                <p>17</p>
+              </td>
+              <td>
+                <p>11</p>
+              </td>
+              <td>
+                <p>46</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" Subway Club</p>
+              </td>
+              <td>
+                <p>6 inch</p>
+              </td>
+              <td>
+                <p>310</p>
+              </td>
+              <td>
+                <p>23</p>
+              </td>
+              <td>
+                <p>5</p>
+              </td>
+              <td>
+                <p>45</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" Subway Club Salad</p>
+              </td>
+              <td>
+                <p>salad</p>
+              </td>
+              <td>
+                <p>140</p>
+              </td>
+              <td>
+                <p>12</p>
+              </td>
+              <td>
+                <p>5</p>
+              </td>
+              <td>
+                <p>15</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" Chicken and Bacon Ranch Melt</p>
+              </td>
+              <td>
+                <p>6 inch</p>
+              </td>
+              <td>
+                <p>560</p>
+              </td>
+              <td>
+                <p>37</p>
+              </td>
+              <td>
+                <p>24</p>
+              </td>
+              <td>
+                <p>37</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" Italian B.M.T.</p>
+              </td>
+              <td>
+                <p>6 inch</p>
+              </td>
+              <td>
+                <p>500</p>
+              </td>
+              <td>
+                <p>24</p>
+              </td>
+              <td>
+                <p>24</p>
+              </td>
+              <td>
+                <p>47</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" Italian B.M.T. Salad</p>
+              </td>
+              <td>
+                <p>salad</p>
+              </td>
+              <td>
+                <p>210</p>
+              </td>
+              <td>
+                <p>12</p>
+              </td>
+              <td>
+                <p>14</p>
+              </td>
+              <td>
+                <p>11</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" Oven Roasted Chicken</p>
+              </td>
+              <td>
+                <p>6 inch</p>
+              </td>
+              <td>
+                <p>320</p>
+              </td>
+              <td>
+                <p>23</p>
+              </td>
+              <td>
+                <p>4</p>
+              </td>
+              <td>
+                <p>47</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" Rotisserie-Style Chicken</p>
+              </td>
+              <td>
+                <p>6 inch</p>
+              </td>
+              <td>
+                <p>350</p>
+              </td>
+              <td>
+                <p>29</p>
+              </td>
+              <td>
+                <p>5</p>
+              </td>
+              <td>
+                <p>44</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" Sweet Onion Chicken Teriyaki</p>
+              </td>
+              <td>
+                <p>6 inch</p>
+              </td>
+              <td>
+                <p>370</p>
+              </td>
+              <td>
+                <p>23</p>
+              </td>
+              <td>
+                <p>3</p>
+              </td>
+              <td>
+                <p>57</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" Sweet Onion Chicken Teriyaki Salad</p>
+              </td>
+              <td>
+                <p>salad</p>
+              </td>
+              <td>
+                <p>230</p>
+              </td>
+              <td>
+                <p>22</p>
+              </td>
+              <td>
+                <p>2</p>
+              </td>
+              <td>
+                <p>32</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" Subway Melt</p>
+              </td>
+              <td>
+                <p>6 inch</p>
+              </td>
+              <td>
+                <p>380</p>
+              </td>
+              <td>
+                <p>24</p>
+              </td>
+              <td>
+                <p>10</p>
+              </td>
+              <td>
+                <p>46</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" Turkey Breast</p>
+              </td>
+              <td>
+                <p>6 inch</p>
+              </td>
+              <td>
+                <p>280</p>
+              </td>
+              <td>
+                <p>18</p>
+              </td>
+              <td>
+                <p>3</p>
+              </td>
+              <td>
+                <p>46</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" Turkey Breast and Ham</p>
+              </td>
+              <td>
+                <p>6 inch</p>
+              </td>
+              <td>
+                <p>290</p>
+              </td>
+              <td>
+                <p>19</p>
+              </td>
+              <td>
+                <p>4</p>
+              </td>
+              <td>
+                <p>47</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" Tuna</p>
+              </td>
+              <td>
+                <p>6 inch</p>
+              </td>
+              <td>
+                <p>530</p>
+              </td>
+              <td>
+                <p>22</p>
+              </td>
+              <td>
+                <p>30</p>
+              </td>
+              <td>
+                <p>46</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" Tuna Salad</p>
+              </td>
+              <td>
+                <p>salad</p>
+              </td>
+              <td>
+                <p>450</p>
+              </td>
+              <td>
+                <p>23</p>
+              </td>
+              <td>
+                <p>23</p>
+              </td>
+              <td>
+                <p>23</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" Subway Seafood Sensation</p>
+              </td>
+              <td>
+                <p>6 inch</p>
+              </td>
+              <td>
+                <p>480</p>
+              </td>
+              <td>
+                <p>14</p>
+              </td>
+              <td>
+                <p>25</p>
+              </td>
+              <td>
+                <p>47</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" Subway Club Salad</p>
+              </td>
+              <td>
+                <p>salad</p>
+              </td>
+              <td>
+                <p>140</p>
+              </td>
+              <td>
+                <p>12</p>
+              </td>
+              <td>
+                <p>5</p>
+              </td>
+              <td>
+                <p>15</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" Spicy Italian</p>
+              </td>
+              <td>
+                <p>6 inch</p>
+              </td>
+              <td>
+                <p>460</p>
+              </td>
+              <td>
+                <p>21</p>
+              </td>
+              <td>
+                <p>20</p>
+              </td>
+              <td>
+                <p>47</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" BMT</p>
+              </td>
+              <td>
+                <p>6 inch</p>
+              </td>
+              <td>
+                <p>500</p>
+              </td>
+              <td>
+                <p>25</p>
+              </td>
+              <td>
+                <p>26</p>
+              </td>
+              <td>
+                <p>46</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" Meatball Marinara</p>
+              </td>
+              <td>
+                <p>6 inch</p>
+              </td>
+              <td>
+                <p>540</p>
+              </td>
+              <td>
+                <p>20</p>
+              </td>
+              <td>
+                <p>27</p>
+              </td>
+              <td>
+                <p>57</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" Chicken Teriyaki</p>
+              </td>
+              <td>
+                <p>6 inch</p>
+              </td>
+              <td>
+                <p>570</p>
+              </td>
+              <td>
+                <p>28</p>
+              </td>
+              <td>
+                <p>5</p>
+              </td>
+              <td>
+                <p>95</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" Chicken Caesar</p>
+              </td>
+              <td>
+                <p>6 inch</p>
+              </td>
+              <td>
+                <p>440</p>
+              </td>
+              <td>
+                <p>29</p>
+              </td>
+              <td>
+                <p>16</p>
+              </td>
+              <td>
+                <p>42</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" Chicken and Bacon Ranch Melt</p>
+              </td>
+              <td>
+                <p>6 inch</p>
+              </td>
+              <td>
+                <p>560</p>
+              </td>
+              <td>
+                <p>37</p>
+              </td>
+              <td>
+                <p>24</p>
+              </td>
+              <td>
+                <p>37</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" Chipotle Southwest Steak &amp; Cheese</p>
+              </td>
+              <td>
+                <p>6 inch</p>
+              </td>
+              <td>
+                <p>500</p>
+              </td>
+              <td>
+                <p>35</p>
+              </td>
+              <td>
+                <p>18</p>
+              </td>
+              <td>
+                <p>47</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" Buffalo Chicken</p>
+              </td>
+              <td>
+                <p>6 inch</p>
+              </td>
+              <td>
+                <p>360</p>
+              </td>
+              <td>
+                <p>25</p>
+              </td>
+              <td>
+                <p>5</p>
+              </td>
+              <td>
+                <p>55</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" Turkey Italiano Melt</p>
+              </td>
+              <td>
+                <p>6 inch</p>
+              </td>
+              <td>
+                <p>460</p>
+              </td>
+              <td>
+                <p>28</p>
+              </td>
+              <td>
+                <p>16</p>
+              </td>
+              <td>
+                <p>46</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" Ultimate Spicy Italian</p>
+              </td>
+              <td>
+                <p>6 inch</p>
+              </td>
+              <td>
+                <p>610</p>
+              </td>
+              <td>
+                <p>29</p>
+              </td>
+              <td>
+                <p>33</p>
+              </td>
+              <td>
+                <p>46</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" Turkey Bacon Guacamole</p>
+              </td>
+              <td>
+                <p>6 inch</p>
+              </td>
+              <td>
+                <p>460</p>
+              </td>
+              <td>
+                <p>25</p>
+              </td>
+              <td>
+                <p>17</p>
+              </td>
+              <td>
+                <p>48</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" Veggie Delight</p>
+              </td>
+              <td>
+                <p>6 inch</p>
+              </td>
+              <td>
+                <p>230</p>
+              </td>
+              <td>
+                <p>9</p>
+              </td>
+              <td>
+                <p>2</p>
+              </td>
+              <td>
+                <p>44</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>6" Veggie Patty</p>
+              </td>
+              <td>
+                <p>6 inch</p>
+              </td>
+              <td>
+                <p>390</p>
+              </td>
+              <td>
+                <p>22</p>
+              </td>
+              <td>
+                <p>10</p>
+              </td>
+              <td>
+                <p>58</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong Black Forest Ham</p>
+              </td>
+              <td>
+                <p>footlong</p>
+              </td>
+              <td>
+                <p>580</p>
+              </td>
+              <td>
+                <p>36</p>
+              </td>
+              <td>
+                <p>8</p>
+              </td>
+              <td>
+                <p>92</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong Cold Cut Combo</p>
+              </td>
+              <td>
+                <p>footlong</p>
+              </td>
+              <td>
+                <p>700</p>
+              </td>
+              <td>
+                <p>34</p>
+              </td>
+              <td>
+                <p>22</p>
+              </td>
+              <td>
+                <p>90</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong Subway Club</p>
+              </td>
+              <td>
+                <p>footlong</p>
+              </td>
+              <td>
+                <p>620</p>
+              </td>
+              <td>
+                <p>46</p>
+              </td>
+              <td>
+                <p>10</p>
+              </td>
+              <td>
+                <p>89</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong Subway Club Salad</p>
+              </td>
+              <td>
+                <p>salad</p>
+              </td>
+              <td>
+                <p>280</p>
+              </td>
+              <td>
+                <p>24</p>
+              </td>
+              <td>
+                <p>10</p>
+              </td>
+              <td>
+                <p>31</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong Chicken and Bacon Ranch Melt</p>
+              </td>
+              <td>
+                <p>footlong</p>
+              </td>
+              <td>
+                <p>1110</p>
+              </td>
+              <td>
+                <p>72</p>
+              </td>
+              <td>
+                <p>48</p>
+              </td>
+              <td>
+                <p>75</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong Italian B.M.T.</p>
+              </td>
+              <td>
+                <p>footlong</p>
+              </td>
+              <td>
+                <p>1000</p>
+              </td>
+              <td>
+                <p>48</p>
+              </td>
+              <td>
+                <p>48</p>
+              </td>
+              <td>
+                <p>94</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong Italian B.M.T. Salad</p>
+              </td>
+              <td>
+                <p>salad</p>
+              </td>
+              <td>
+                <p>420</p>
+              </td>
+              <td>
+                <p>23</p>
+              </td>
+              <td>
+                <p>28</p>
+              </td>
+              <td>
+                <p>21</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong Oven Roasted Chicken</p>
+              </td>
+              <td>
+                <p>footlong</p>
+              </td>
+              <td>
+                <p>640</p>
+              </td>
+              <td>
+                <p>45</p>
+              </td>
+              <td>
+                <p>8</p>
+              </td>
+              <td>
+                <p>91</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong Rotisserie-Style Chicken</p>
+              </td>
+              <td>
+                <p>footlong</p>
+              </td>
+              <td>
+                <p>680</p>
+              </td>
+              <td>
+                <p>58</p>
+              </td>
+              <td>
+                <p>10</p>
+              </td>
+              <td>
+                <p>87</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong Sweet Onion Chicken Teriyaki</p>
+              </td>
+              <td>
+                <p>footlong</p>
+              </td>
+              <td>
+                <p>740</p>
+              </td>
+              <td>
+                <p>46</p>
+              </td>
+              <td>
+                <p>6</p>
+              </td>
+              <td>
+                <p>113</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong Sweet Onion Chicken Teriyaki Salad</p>
+              </td>
+              <td>
+                <p>salad</p>
+              </td>
+              <td>
+                <p>460</p>
+              </td>
+              <td>
+                <p>44</p>
+              </td>
+              <td>
+                <p>3</p>
+              </td>
+              <td>
+                <p>65</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong Subway Melt</p>
+              </td>
+              <td>
+                <p>footlong</p>
+              </td>
+              <td>
+                <p>760</p>
+              </td>
+              <td>
+                <p>48</p>
+              </td>
+              <td>
+                <p>20</p>
+              </td>
+              <td>
+                <p>91</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong Turkey Breast</p>
+              </td>
+              <td>
+                <p>footlong</p>
+              </td>
+              <td>
+                <p>560</p>
+              </td>
+              <td>
+                <p>36</p>
+              </td>
+              <td>
+                <p>6</p>
+              </td>
+              <td>
+                <p>92</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong Turkey Breast and Ham</p>
+              </td>
+              <td>
+                <p>footlong</p>
+              </td>
+              <td>
+                <p>580</p>
+              </td>
+              <td>
+                <p>38</p>
+              </td>
+              <td>
+                <p>7</p>
+              </td>
+              <td>
+                <p>93</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong Tuna</p>
+              </td>
+              <td>
+                <p>footlong</p>
+              </td>
+              <td>
+                <p>1060</p>
+              </td>
+              <td>
+                <p>45</p>
+              </td>
+              <td>
+                <p>62</p>
+              </td>
+              <td>
+                <p>94</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong Tuna Salad</p>
+              </td>
+              <td>
+                <p>salad</p>
+              </td>
+              <td>
+                <p>900</p>
+              </td>
+              <td>
+                <p>46</p>
+              </td>
+              <td>
+                <p>45</p>
+              </td>
+              <td>
+                <p>58</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong Subway Seafood Sensation</p>
+              </td>
+              <td>
+                <p>footlong</p>
+              </td>
+              <td>
+                <p>960</p>
+              </td>
+              <td>
+                <p>28</p>
+              </td>
+              <td>
+                <p>50</p>
+              </td>
+              <td>
+                <p>94</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong Subway Club Salad</p>
+              </td>
+              <td>
+                <p>salad</p>
+              </td>
+              <td>
+                <p>280</p>
+              </td>
+              <td>
+                <p>24</p>
+              </td>
+              <td>
+                <p>10</p>
+              </td>
+              <td>
+                <p>31</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong Spicy Italian</p>
+              </td>
+              <td>
+                <p>footlong</p>
+              </td>
+              <td>
+                <p>1230</p>
+              </td>
+              <td>
+                <p>56</p>
+              </td>
+              <td>
+                <p>53</p>
+              </td>
+              <td>
+                <p>94</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong BMT</p>
+              </td>
+              <td>
+                <p>footlong</p>
+              </td>
+              <td>
+                <p>1000</p>
+              </td>
+              <td>
+                <p>50</p>
+              </td>
+              <td>
+                <p>52</p>
+              </td>
+              <td>
+                <p>92</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong Meatball Marinara</p>
+              </td>
+              <td>
+                <p>footlong</p>
+              </td>
+              <td>
+                <p>1070</p>
+              </td>
+              <td>
+                <p>40</p>
+              </td>
+              <td>
+                <p>54</p>
+              </td>
+              <td>
+                <p>105</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong Chicken Teriyaki</p>
+              </td>
+              <td>
+                <p>footlong</p>
+              </td>
+              <td>
+                <p>1140</p>
+              </td>
+              <td>
+                <p>57</p>
+              </td>
+              <td>
+                <p>11</p>
+              </td>
+              <td>
+                <p>191</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong Chicken Caesar</p>
+              </td>
+              <td>
+                <p>footlong</p>
+              </td>
+              <td>
+                <p>880</p>
+              </td>
+              <td>
+                <p>58</p>
+              </td>
+              <td>
+                <p>32</p>
+              </td>
+              <td>
+                <p>84</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong Chipotle Southwest Steak &amp; Cheese</p>
+              </td>
+              <td>
+                <p>footlong</p>
+              </td>
+              <td>
+                <p>1000</p>
+              </td>
+              <td>
+                <p>69</p>
+              </td>
+              <td>
+                <p>36</p>
+              </td>
+              <td>
+                <p>94</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong Buffalo Chicken</p>
+              </td>
+              <td>
+                <p>footlong</p>
+              </td>
+              <td>
+                <p>720</p>
+              </td>
+              <td>
+                <p>50</p>
+              </td>
+              <td>
+                <p>11</p>
+              </td>
+              <td>
+                <p>111</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong Turkey Italiano Melt</p>
+              </td>
+              <td>
+                <p>footlong</p>
+              </td>
+              <td>
+                <p>920</p>
+              </td>
+              <td>
+                <p>56</p>
+              </td>
+              <td>
+                <p>32</p>
+              </td>
+              <td>
+                <p>92</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong Ultimate Spicy Italian</p>
+              </td>
+              <td>
+                <p>footlong</p>
+              </td>
+              <td>
+                <p>1230</p>
+              </td>
+              <td>
+                <p>58</p>
+              </td>
+              <td>
+                <p>66</p>
+              </td>
+              <td>
+                <p>92</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong Turkey Bacon Guacamole</p>
+              </td>
+              <td>
+                <p>footlong</p>
+              </td>
+              <td>
+                <p>910</p>
+              </td>
+              <td>
+                <p>48</p>
+              </td>
+              <td>
+                <p>34</p>
+              </td>
+              <td>
+                <p>92</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong Veggie Delight</p>
+              </td>
+              <td>
+                <p>footlong</p>
+              </td>
+              <td>
+                <p>460</p>
+              </td>
+              <td>
+                <p>18</p>
+              </td>
+              <td>
+                <p>4</p>
+              </td>
+              <td>
+                <p>88</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Footlong Veggie Patty</p>
+              </td>
+              <td>
+                <p>footlong</p>
+              </td>
+              <td>
+                <p>780</p>
+              </td>
+              <td>
+                <p>42</p>
+              </td>
+              <td>
+                <p>20</p>
+              </td>
+              <td>
+                <p>116</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+     
+      <h2>Unlock the Secrets of Subway's Nutritional Powerhouse</h2>
+      <p>Are you <strong>on the hunt for a delicious and nutritious meal</strong> that won't derail your fitness goals? Look no further than Subway, the world-renowned sandwich chain that has revolutionized the concept of fresh, healthy eating. With their extensive menu filled with mouthwatering options, <strong>Subway's nutrition calculator is a game-changer for anyone seeking to make informed choices</strong> about their diet.</p>
+      <h2>Navigating Subway's Nutritional Landscape</h2>
+      <p><strong>Subway's commitment to transparency</strong> shines through their comprehensive nutrition guide, which meticulously details the nutritional values of every item on their menu. From the classic <strong>Italian BMT</strong> to the veggie-packed <strong>Veggie Delight</strong>, each sandwich, salad, and protein bowl is broken down into its essential components, <strong>empowering you to make informed decisions</strong> that align with your dietary preferences and goals.</p>
+      <h3>Bread: The Foundation of Flavor</h3>
+      <p>At Subway, the bread is more than just a vessel &ndash; <strong>it's a canvas upon which culinary masterpieces are crafted</strong>. Whether you opt for the hearty Italian herb and cheese, the fiber-rich multigrain, or the keto-friendly option, <strong>Subway's bread choices cater to a wide range of dietary needs</strong>, ensuring that every bite is a delightful experience.</p>
+      <h3>Proteins: The Powerhouses of Nutrition</h3>
+      <p>From the savory <strong>Rotisserie-Style Chicken</strong> to the plant-based <strong>Veggie Patty</strong>, Subway's protein options are a true testament to their commitment to variety and quality. <strong>Packed with essential nutrients</strong> and boasting mouthwatering flavors, these proteins are the perfect partners for a satisfying and nutritious meal.</p>
+      <h2>Customizing Your Subway Experience</h2>
+      <p>One of the greatest strengths of Subway lies in its <strong>ability to cater to individual preferences and dietary requirements</strong>. With a vast array of toppings, sauces, and dressings, you can <strong>craft your sandwich or salad to perfection</strong>, ensuring that every bite is a harmonious blend of flavors tailored to your unique tastes.</p>
+      <h3>Sauces and Dressings: The Secret Flavor Boosters</h3>
+      <p><strong>Subway's selection of sauces and dressings</strong> is a true testament to their commitment to flavor and variety. From the tangy <strong>Peppercorn Ranch</strong> to the bold <strong>Baja Chipotle</strong>, these condiments add an extra layer of zest to your meal, <strong>elevating the taste experience to new heights</strong>.</p>
+      <h2>People Also Ask</h2>
+      <h3>What are the healthiest options at Subway?</h3>
+      <p><strong>Some of the healthiest options at Subway</strong> include the Veggie Delight, the Oven Roasted Chicken, and the Rotisserie-Style Chicken sandwiches. Salads and protein bowls are also great choices, as you can load up on fresh veggies and lean proteins. <strong>Opt for whole-grain breads, choose nutrient-dense toppings, and go easy on high-calorie sauces and dressings</strong> to create a balanced and nutritious meal.</p>
+      <h3>How accurate is Subway's nutrition calculator?</h3>
+      <p><strong>Subway's nutrition calculator</strong> is designed to provide accurate and up-to-date nutritional information for their menu items. <strong>The data is sourced directly from their suppliers and regularly updated to reflect any changes in ingredients or recipes</strong>. However, it's important to note that individual sandwiches may vary slightly due to portion sizes and customizations.</p>
+      <h3>Does Subway offer low-carb or keto-friendly options?</h3>
+      <p><strong>Yes, Subway does offer low-carb and keto-friendly options</strong>. In addition to salads and protein bowls, they have a <strong>Keto Bread option</strong> that is low in carbs and high in fiber. You can also opt for sandwiches wrapped in lettuce or built on a bed of greens to reduce your carb intake.</p>
+      <h3>How can I customize my Subway sandwich to be healthier?</h3>
+      <p><strong>To make your Subway sandwich healthier</strong>, consider choosing whole-grain bread, lean protein sources like turkey or grilled chicken, and loading up on fresh veggies. <strong>Go easy on high-calorie sauces and dressings</strong>, and opt for flavorful alternatives like mustard, vinegar, or oil and vinegar. You can also request to have your sandwich toasted or "scooped" to reduce the bread portion.</p>
+      <h3>Does Subway offer vegetarian and vegan options?</h3>
+      <p><strong>Absolutely! Subway has a variety of vegetarian and vegan options</strong> to cater to different dietary preferences. Their Veggie Delight and Veggie Patty sandwiches are suitable for vegetarians, while <strong>vegans can enjoy customized salads or sandwiches built on breads without dairy or egg products</strong>. Be sure to check with the staff for any updates on vegan-friendly options.</p>
+      <h2>Conclusion</h2>
+      <p><strong>Subway's commitment to transparency</strong> and its extensive nutrition guide <strong>empower you to make informed choices</strong> that align with your health goals and dietary preferences. With <strong>a wide array of fresh ingredients</strong>, customizable options, and detailed nutritional information at your fingertips, <strong>you can confidently embark on a journey towards a healthier and more flavorful lifestyle</strong>. So, what are you waiting for? <strong>Unlock the secrets of Subway's nutritional powerhouse</strong> and embark on a culinary adventure that satisfies both your taste buds and your wellness aspirations.</p>
+      <p><strong>Disclaimer:</strong> This content was generated by an AI writing assistant after analyzing information from various sources. It should not be considered a substitute for professional nutritional advice or the official nutritional information provided by Subway. Always consult with a healthcare professional or refer to Subway's official resources for the most accurate and up-to-date nutritional information.</p>
+    </div>
+
+
+  </div>
+  <!-- Footer-->
+  <footer class="footerbar py-2 mb-0 mt-auto">
+
+    <ul class="nav justify-content-center">
+
+
+      <li class="nav-item">
+        <!-- Contact Us -->
+        <a href="/contact-us/" class="nav-link px-2 py-1">Contact Us</a>
+      </li>
+      <li class="nav-item">
+        <!-- Terms and Conditions -->
+        <a href="/terms-and-conditions/" class="nav-link px-2 py-1">Terms and Conditions</a>
+      </li>
+      <li class="nav-item">
+        <!-- Privacy Policy -->
+        <a href="/privacy-policy/" class="nav-link px-2 py-1">Privacy Policy</a>
+      </li>
+      <li class="nav-item">
+        <!-- Disclaimer -->
+        <a href="/disclaimer/" class="nav-link px-2 py-1">Disclaimer</a>
+      </li>
+      <li class="nav-item">
+        <!-- dmca -->
+        <a href="/dmca/" class="nav-link px-2 py-1">DMCA</a>
+      </li>
+    </ul>
+    <p class="text-center mb-1">© 2024 SubwayNutritionCalculator.github.io</p>
+  </footer>
+
+
+  <!-- Back to Top Button -->
+  <a href="#" id="scroll" style="display: none"><span></span></a>
+
+  <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="/assets/scripts/light-dark-switch.min.js"></script>
+  <script src="/assets/scripts/scrolltotop.min.js"></script>
+
+  <!-- Subway Nutrition Scripts -->
+  <script type="text/javascript" src="/assets/Subway_Nutrition_assest/scripts_Subway_Nutrition/SNC_1.min.js"></script>
+  <script type="text/javascript" src="/assets/Subway_Nutrition_assest/scripts_Subway_Nutrition/SNC_2.min.js"></script>
+
+</body>
+
+</html>
